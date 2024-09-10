@@ -8,12 +8,18 @@ def fibonacci(n):
     return fibonacci(n - 1) + fibonacci(n - 2)
 
 
-#ex: made array so can print a list until index 10
-for n in range(0, 10):
-    print(fibonacci(n))
+# Get user input and validate it
+x = int(input("Enter a number: "))
+
+if x < 0:
+    print("Please enter a non-negative number.")
+else:
+    # Print Fibonacci sequence up to the user-specified index
+    for n in range(0, x):
+        print(fibonacci(n))
 
 
-# ----------------------
+# ---------------------------------------------------------------------
 
 #functoin for search miss number and reteun type integer
 def missingNumber(nums: List[int]) -> int:
